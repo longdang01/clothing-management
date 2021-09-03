@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8A53DD8-01DC-400C-A12F-64720C868144}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLShopThoiTrang</RootNamespace>
+    <AssemblyName>QLShopThoiTrang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\BanHangBUS.cs" />
+    <Compile Include="BUS\LoaiSPBUS.cs" />
+    <Compile Include="BUS\LoginBUS.cs" />
+    <Compile Include="BUS\NhaCungCapBUS.cs" />
+    <Compile Include="BUS\NhanVienBUS.cs" />
+    <Compile Include="BUS\PhieuNhapBUS.cs" />
+    <Compile Include="BUS\SanPhamBUS.cs" />
+    <Compile Include="DAL\BanHang.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BanHangDAL.cs" />
+    <Compile Include="DAL\ChiTietBan.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ChiTietNhap.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataHelper.cs" />
+    <Compile Include="DAL\GioHang.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\KhachHang.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LayNhanVienTheoTen_Result.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LoaiSanPham.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\LoaiSPDAL.cs" />
+    <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\MDQLShopThoiTrang.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MDQLShopThoiTrang.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MDQLShopThoiTrang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\MDQLShopThoiTrang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MDQLShopThoiTrang.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NCC.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NhaCungCapDAL.cs" />
+    <Compile Include="DAL\NhanVien.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="DAL\NhapHang.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NhapKho.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NVBHTrongNam_Result.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\NVBHTrongThang_Result.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\PhieuNhapDAL.cs" />
+    <Compile Include="DAL\QuanLy.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SanPham.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\SanPhamDAL.cs" />
+    <Compile Include="DAL\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sp_helpdiagrams_Result.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sysdiagram.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\User.cs">
+      <DependentUpon>MDQLShopThoiTrang.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="DAL\MDQLShopThoiTrang.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MDQLShopThoiTrang.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\MDQLShopThoiTrang.edmx.diagram">
+      <DependentUpon>MDQLShopThoiTrang.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\clothinglogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\MDQLShopThoiTrang.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MDQLShopThoiTrang.edmx</DependentUpon>
+      <LastGenOutput>MDQLShopThoiTrang.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\MDQLShopThoiTrang.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MDQLShopThoiTrang.edmx</DependentUpon>
+      <LastGenOutput>MDQLShopThoiTrang.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

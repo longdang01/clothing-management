@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ba392e39f770422c87e721e79caf28fe" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.BanHang" Width="1.5" PointX="3" PointY="9.375" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.ChiTietBan" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.ChiTietNhap" Width="1.5" PointX="5.25" PointY="3.75" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.KhachHang" Width="1.5" PointX="0.75" PointY="16.125" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.LoaiSanPham" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.NCC" Width="1.5" PointX="0.75" PointY="20" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.NhanVien" Width="1.5" PointX="0.75" PointY="8" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.NhapHang" Width="1.5" PointX="3" PointY="19.625" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.QuanLy" Width="1.5" PointX="3.75" PointY="12.875" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.SanPham" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.sysdiagram" Width="1.5" PointX="5.75" PointY="7" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.User" Width="1.5" PointX="1.5" PointY="13" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaDonBan_ChiTietBan" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaKH_BanHang" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaNV_BanHang" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaSP_ChiTietBan" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaDonNhap_ChiTietNhap" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaSP_ChiTietNhap" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaLoai_SanPham" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaNCC_NhapHang" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaNV_MaNV" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaNV_NhapHang" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaQL_QuanLy" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.NhapKho" Width="1.5" PointX="5.25" PointY="10" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaSP_NhapKho" />
+        <EntityTypeShape EntityType="QLShopThoiTrangModel.GioHang" Width="1.5" PointX="5.25" PointY="17.125" />
+        <AssociationConnector Association="QLShopThoiTrangModel.FK_MaSP_GioHang" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
